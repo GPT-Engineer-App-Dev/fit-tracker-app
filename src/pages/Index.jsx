@@ -1,17 +1,32 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Box, Text, Flex, Spacer, IconButton, Heading } from "@chakra-ui/react";
+import { FaHome, FaChartLine, FaUser } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container maxW="container.xl" p={0}>
+      <Flex as="nav" bg="blue.500" color="white" p={4} align="center">
+        <Heading size="md">Fitness Tracker</Heading>
+        <Spacer />
+        <IconButton aria-label="Home" icon={<FaHome />} variant="ghost" color="white" />
+        <IconButton aria-label="Dashboard" icon={<FaChartLine />} variant="ghost" color="white" />
+        <IconButton aria-label="Profile" icon={<FaUser />} variant="ghost" color="white" />
+      </Flex>
+      <VStack spacing={4} align="stretch" p={4}>
+        <Box bg="gray.100" p={4} borderRadius="md" boxShadow="md">
+          <Heading size="lg">Dashboard</Heading>
+          <Text>Track your fitness metrics here.</Text>
+          {/* Placeholder for fitness metrics */}
+        </Box>
+        <Box bg="gray.100" p={4} borderRadius="md" boxShadow="md">
+          <Heading size="lg">User Input</Heading>
+          <Text>Enter your fitness data here.</Text>
+          {/* Placeholder for user input */}
+        </Box>
+        <Box bg="gray.100" p={4} borderRadius="md" boxShadow="md">
+          <Heading size="lg">Data Visualization</Heading>
+          <Text>Visualize your progress here.</Text>
+          {/* Placeholder for data visualization */}
+        </Box>
       </VStack>
     </Container>
   );
